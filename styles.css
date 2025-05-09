@@ -1,0 +1,351 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Header com gradiente */
+header {
+    background: linear-gradient(90deg, #000, #d4af37, #000);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: fadeInDown 1s ease-in;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+/* Carrossel */
+.carrossel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carrossel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.carrossel-slide.active {
+    display: block;
+}
+
+.carrossel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d4af37;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: bounceIn 1s ease-in;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+.carrossel-btn:hover {
+    background: #d4af37;
+}
+
+/* Seção de Serviços */
+.servicos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    margin-bottom: 30px;
+    color: #d4af37;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: scaleIn 1s ease-in;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Seção de Barbeiros */
+.barbeiros {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.barbeiros h2 {
+    margin-bottom: 30px;
+    color: #d4af37;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in;
+}
+
+.barbeiros-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.barbeiro {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+    animation: scaleIn 1s ease-in;
+}
+
+.barbeiro h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.barbeiro:hover {
+    transform: scale(1.05);
+}
+
+/* Botão Fixo */
+.btn-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d4af37;
+    color: #000;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.btn-fixo:hover {
+    background: #fff;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 40px 20px;
+    border-top: 2px solid #d4af37;
+    animation: fadeInUp 1s ease-in;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #d4af37;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    animation: fadeIn 1s ease-in 0.3s backwards;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .carrossel-slide img {
+        height: 300px;
+    }
+
+    .carrossel-text {
+        font-size: 1.5em;
+    }
+
+    .cards-container, .barbeiros-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
