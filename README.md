@@ -11,3 +11,5 @@ ESSE PROJETO FOI CRIADO COM MINHAS IDEIAS ORIGINAIS, E APRIMORADA EM I.A
 - CSS
 
 - JAVASCRIPT
+
+https://barbearia-elegancia.netlify.app/#contato
